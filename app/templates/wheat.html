@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div>Enter Wheat Data</div>
+    <form method="POST" action="/wheat">
+        <div class="row">
+            <div>
+                {{ form.csrf_token }}
+                {{ form.year.label }}
+                {{ form.year(size=20) }}
+            </div>
+            <div>
+                {{ form.area.label }}
+                {{ form.area(size=20) }}
+            </div>
+            <div>
+                {{ form.tavg.label }}
+                {{ form.tavg(size=20) }}
+            </div>
+            <div>
+                {{ form.cdd.label }}
+                {{ form.cdd(size=20) }}
+            </div>
+            <div>
+                {{ form.hdd.label }}
+                {{ form.hdd(size=20) }}
+            </div>
+            <div>
+                {{ form.tmax.label }}
+                {{ form.tmax(size=20) }}
+            </div>
+            <div>
+                {{ form.tmin.label }}
+                {{ form.tmin(size=20) }}
+            </div>
+            <div>
+                {{ form.pzi.label }}
+                {{ form.pzi(size=20) }}
+            </div>
+            <div>
+                {{ form.pp.label }}
+                {{ form.pp(size=20) }}
+            </div>
+            <div>
+                {{ form.lat.label }}
+                {{ form.lat(size=20) }}
+            </div>
+            <div>
+                {{ form.lon.label }}
+                {{ form.lon(size=20) }}
+            </div>
+        </div>
+        <div>Result: {{ result }}</div>
+        <input type="submit" value="Run">
+    </form>
+</div>
+{% endblock %}

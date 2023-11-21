@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>2D Project - Prediction of Crop Yields</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row align-items-start">
+              <div class="col">
+                <h1>2D Project - Prediction of Crop Yields 🧑‍🌾</h1>
+              </div>
+              <div class="col"></div>
+              <div class="col">
+                <span>Khoo Jing Heng 1007221</span>
+                <br />
+                <span>Austin Isaac 1007099</span>
+                <br />
+                <span>Ang Lexuan 1006629</span>
+                <br />
+                <span>Rout Bishmit 1007088</span>
+                <br />
+                <span>Daniel John Lim Jun-Yan 1007174</span>
+                <br />
+                </span>
+              </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>
