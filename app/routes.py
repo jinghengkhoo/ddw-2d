@@ -17,6 +17,5 @@ def wheat():
     result = ""
     print("wheat loaded")
     if form.validate_on_submit():
-        result = wheat_pred(form.x1.data)
-        print(result)
+        result = str(wheat_pred(form)) + "(1000 Bushels)"
     return render_template('wheat.html', form=form, result=result)
