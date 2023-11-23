@@ -1,41 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% import "bootstrap5/form.html" as wtf %}
 <div class="container">
     <div>Enter Wheat Data</div>
-    <form method="POST" action="/wheat">
-        <div class="row">
-            <div>
-                {{ form.csrf_token }}
-                {{ form.area.label }}
-                {{ form.area(size=20) }}
-            </div>
-            <div>
-                {{ form.lon.label }}
-                {{ form.lon(size=20) }}
-            </div>
-            <div>
-                {{ form.lat.label }}
-                {{ form.lat(size=20) }}
-            </div>
-            <div>
-                {{ form.hdd.label }}
-                {{ form.hdd(size=20) }}
-            </div>
-            <div>
-                {{ form.tdiff.label }}
-                {{ form.tdiff(size=20) }}
-            <div> 
-            <div>
-                {{ form.tavg.label }}
-                {{ form.tavg(size=20) }}
-            </div>
-                Result: {{ result }} 
-            </div>
-            <input type="submit" value="Run">
-        </div>
-        
-        
-    </form>
+    <div class="row"></div>
+        {{ wtf.render_form(form)}}
+        Result: {{ result }} 
+    </div>
 </div>
 {% endblock %}

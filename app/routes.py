@@ -2,8 +2,11 @@ from flask import render_template
 from app.forms import WheatDataEntryForm
 from app.regression import wheat_pred
 from app import application
+from flask_wtf.csrf import CSRFProtect
 
-@application.route('/')
+csrf = CSRFProtect(application)
+
+@application.route('/', methods=['GET','POST'])
 @application.route('/wheat', methods=['GET','POST'])
 def wheat():
     """
